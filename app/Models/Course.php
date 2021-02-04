@@ -13,4 +13,9 @@ class Course extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getExcertAttribute()
+    {
+        return substr($this->description, 0, 80) . '...';
+    }
 }
